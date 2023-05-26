@@ -1,0 +1,29 @@
+{
+  "site": {
+    "title": "Reach Locations",
+    "base_url": "https://reachlocations.com",
+    "favicon": "/images/favicon.svg",
+    "logo": "/images/logo.svg",
+    "logo_width": "150",
+    "logo_height": "70",
+    "logo_text": "Reach Locations",
+    "ga" : "G-ZG2FJVHHPX"
+  },
+
+  "settings": {
+    "pagination": 5,
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+
+  "params": {
+    "tag_manager_id": "",
+    "copyright": "Copyright © 2023"
+  },
+
+  "metadata": {
+    "meta_author": "Amrut Prabhu",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Discover new destinations and plan your next adventure with our collection of articles about the best places to visit. From stunning natural landscapes to vibrant cities, our articles offer inspiration and practical advice for travelers of all interests. Explore the world and make unforgettable memories with our expert travel guides and insider tips. Start planning your next trip today!"
+  }
+}
