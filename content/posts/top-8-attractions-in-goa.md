@@ -5,7 +5,7 @@ date: 2023-03-29T05:00:00Z
 image: "/images/posts/top-8-attraction-in-goa/cover.jpg"
 categories: []
 authors: [""]
-tags: ["Goa", "nightlife", "culture", "destinations in India"]
+tags: ["Goa", "goa nightlife", "goa culture", "destinations in India"]
 draft: false
 ---
 Located on the stunning west coast of India, Goa is the smallest state that boasts of beautiful beaches, rich cultural heritage, and a vibrant nightlife. As a popular tourist destination, there's something for everyone to enjoy in Goa, whether you're a history enthusiast or a beach lover. To help you plan your trip, we've listed the top must-see attractions in Goa that you can't afford to miss.
