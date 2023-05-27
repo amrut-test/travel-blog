@@ -81,7 +81,7 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                   <li className="inline-block" key={`tag-${i}`}>
                     <Link
                       href={`/tags/${slugify(tag)}`}
-                      className="block rounded-lg bg-slate-300 dark:bg-slate-700 px-4 py-2 font-semibold text-dark hover:text-primary"
+                      className="block rounded-lg bg-slate-300 px-4 py-2 font-semibold text-dark hover:text-primary dark:bg-slate-700"
                     >
                       #{humanize(tag)}
                     </Link>
@@ -100,7 +100,11 @@ const PostSingle = ({ post, posts, authors, slug }) => {
       </section>
       <section className="section">
         <div className="container">
-          <h2 className="mb-8 text-center">Similar Posts</h2>
+          {similarPosts.length > 0 ? (
+            <h2 className="text-custom-xs mb-8 text-center font-bold">
+              Similar Posts
+            </h2>
+          ) : null}
           <SimilarPosts posts={similarPosts.slice(0, 3)} />
         </div>
       </section>
