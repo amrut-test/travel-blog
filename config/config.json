@@ -11,8 +11,8 @@
   },
 
   "settings": {
-    "pagination": 5,
-    "summary_length": 200,
+    "pagination": 4,
+    "summary_length": 150,
     "blog_folder": "posts"
   },
 

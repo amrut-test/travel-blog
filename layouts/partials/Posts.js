@@ -7,24 +7,27 @@ import Link from "next/link";
 const Posts = ({ posts, authors, className }) => {
   const { summary_length } = config.settings;
   return (
-    <div className={`row space-y-10 ${className}`}>
+      <div className="flex flex-wrap justify-around">
       {posts.map((post, i) => (
         <div
           key={`key-${i}`}
-          className={`${i === 0 ? "col-12" : "col-12 sm:col-6"} shadow-lg hover:scale-105 duration-200 dark:shadow-slate-700 rounded-lg p-5`}
+          className=" border-2 m-2 sm:w-96 shadow-lg rounded-lg p-5"
         >
+          <div>
           {post.frontmatter.image && (
             <Link href={`/${post.slug}`} className="block hover:text-primary">
               <Image
-                className="rounded-lg"
+                className="rounded-lg "
                 src={post.frontmatter.image}
                 alt={post.frontmatter.title}
-                width={i === 0 ? "925" : "445"}
-                height={i === 0 ? "475" : "230"}
-                priority={i === 0 ? true : false}
+                width="505"
+                height="230"
+                // priority=e : false}
               />
             </Link>
           )}
+          </div>
+          <div>
           <ul className="mt-4 mb-4 flex flex-wrap items-center space-x-3 text-text">
             <li>
               {authors
@@ -73,12 +76,13 @@ const Posts = ({ posts, authors, className }) => {
               {post.frontmatter.title}
             </Link>
           </h3>
-          <p className="text-text">
+          <p className="text-text desc">
             {post.content && post.content.slice(0, Number(summary_length))}...
           </p>
+          </div>
         </div>
       ))}
-    </div>
+      </div>
   );
 };
 

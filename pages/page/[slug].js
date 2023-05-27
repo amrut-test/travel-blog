@@ -14,16 +14,23 @@ const BlogPagination = ({ posts, authors, currentPage, pagination }) => {
 
   return (
     <Base>
-      <section className="section">
-        <div className="container">
+      <section className="section mx-auto p-5 md:w-9/12 md:p-0">
+        <div>
           <div className="pb-5">
             <div className="pb-4 text-5xl text-slate-700 dark:text-slate-300">
               Articles
             </div>
             <hr />
           </div>
-          <Posts className="mb-16" posts={currentPosts} authors={authors} />
-          <Pagination totalPages={totalPages} currentPage={currentPage} />
+          <div className="flex flex-col flex-wrap md:flex-row">
+            <div className="md:w-9/12 ">
+              <div className="mb-16">
+                <Posts className=" " posts={currentPosts} authors={authors} />
+              </div>
+              <Pagination totalPages={totalPages} currentPage={currentPage} />
+            </div>
+            <div className="bg-gray-500 md:w-3/12">hello.....</div>
+          </div>
         </div>
       </section>
     </Base>
