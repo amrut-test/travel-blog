@@ -5,7 +5,7 @@ date: 2023-05-26T05:00:00Z
 image: "/images/posts/2023/top-south-goa-beaches-you-must-visit/cover.webp"
 categories: []
 authors: [""]
-tags: ["Goa","north", "Beaches", "destinations in India", ]
+tags: ["Goa","north goa", "goa beaches", "destinations in India", ]
 draft: false
 ---
 

@@ -7,12 +7,19 @@ const prettier = require('prettier')
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
   const pages = await globby([
     'pages/*.js',
+    '!pages/[regular].js',
+    '!pages/search.js',
     // 'content/posts/**/*.mdx',
     'content/posts/**/*.md',
     'public/tags/**/*.xml',
     '!pages/_*.js',
     '!pages/api',
   ])
+
+  const filePath = './public/tags.txt';
+
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const strings = fileContent.split('\n');
 
   const sitemap = `
         <?xml version="1.0" encoding="UTF-8"?>
@@ -46,6 +53,18 @@ const prettier = require('prettier')
                     `
               })
               .join('')}
+
+              ${strings
+                .map((page) => {
+                  console.log(page)
+                  const path = page
+                  return `
+                          <url>
+                              <loc>https://reachlocations.com/tags/${path}</loc>
+                          </url>
+                      `
+                })
+                .join('')}
         </urlset>
     `
 

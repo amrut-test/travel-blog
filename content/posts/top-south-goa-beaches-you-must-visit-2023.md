@@ -5,7 +5,7 @@ date: 2023-05-25T05:00:00Z
 image: "/images/posts/2023/top-5-north-goa-beaches-2023/cover.webp"
 categories: []
 authors: [""]
-tags: ["Goa", "South", "Beaches", "destinations in India", ]
+tags: ["Goa", "South goa", "goa Beaches", "destinations in India", ]
 draft: false
 ---
 
