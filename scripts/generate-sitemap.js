@@ -14,6 +14,11 @@ const prettier = require('prettier')
     '!pages/api',
   ])
 
+  const filePath = './public/tags.txt';
+
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const strings = fileContent.split('\n');
+
   const sitemap = `
         <?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -46,6 +51,18 @@ const prettier = require('prettier')
                     `
               })
               .join('')}
+
+              ${strings
+                .map((page) => {
+                  console.log(page)
+                  const path = page
+                  return `
+                          <url>
+                              <loc>https://reachlocations.com/tags/${path}</loc>
+                          </url>
+                      `
+                })
+                .join('')}
         </urlset>
     `
 

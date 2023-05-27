@@ -5,6 +5,7 @@ import { getTaxonomy } from "@lib/taxonomyParser";
 import { slugify } from "@lib/utils/textConverter";
 import Posts from "@partials/Posts";
 const { blog_folder } = config.settings;
+import fs from "fs";
 
 // tag page
 const Tag = ({ tag, posts, authors }) => {
@@ -33,6 +34,11 @@ export const getStaticPaths = () => {
       tag: tag,
     },
   }));
+
+  const filePath = "./public/tags.txt";
+  const fileContent = allCategories.join("\n");
+  console.log("writing file");
+  fs.writeFileSync(filePath, fileContent);
 
   return { paths, fallback: false };
 };
